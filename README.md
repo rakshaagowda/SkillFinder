@@ -48,4 +48,135 @@ The project strongly emphasizes **Database Management System (DBMS) concepts**, 
 | 🗄️ **Database** | [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html) |
 | 🧠 **ORM** | [![Prisma ORM](https://img.shields.io/badge/Prisma%20ORM-Schema--First%20%7C%20Type--Safe-4B32C3?style=for-the-badge)](https://www.prisma.io/docs) |
 
+```mermaid
+  flowchart LR
+    A[User Interface<br/>React App]
+    B[Backend API<br/>Node.js + Express]
+    C[ORM Layer<br/>Prisma]
+    D[Database<br/>SQLite]
 
+    A -->|Request| B
+    B -->|Query| C
+    C -->|Read / Write| D
+    D -->|Result| C
+    C -->|Response| B
+    B -->|JSON Data| A
+
+
+---
+
+## 6️⃣ ER Diagram (Conceptual Data Model)
+
+```md
+## 📊 Conceptual Data Model (ER Diagram)
+
+```mermaid
+erDiagram
+    USER ||--o{ ENROLLMENT : enrolls
+    PLATFORM ||--o{ ENROLLMENT : contains
+
+    USER {
+        string id PK
+        string username UNIQUE
+        string password
+        datetime createdAt
+    }
+
+    PLATFORM {
+        string id PK
+        string name
+        string type
+        string categories
+        string languages
+        float rating
+        string topCourse
+        datetime createdAt
+    }
+
+    ENROLLMENT {
+        string id PK
+        string userId FK
+        string platformId FK
+        datetime enrolledAt
+    }
+---
+```md
+## 🗂️ Database Schema Overview
+
+### User
+- `id` (Primary Key, UUID)
+- `username` (Unique)
+- `password` (Hashed)
+- `createdAt`
+- `enrollments`
+
+### Platform
+- `id` (Primary Key, UUID)
+- `name`
+- `type` (online/offline)
+- `categories` (JSON string)
+- `languages`
+- `rating`
+- `topCourse` (Nullable)
+- `createdAt`
+- `enrollments`
+
+### Enrollment (Junction Table)
+- `id` (Primary Key, UUID)
+- `userId` (Foreign Key → User)
+- `platformId` (Foreign Key → Platform)
+- `enrolledAt`
+- Composite unique constraint on (`userId`, `platformId`)
+
+## 🧪 DBMS Concepts Implemented
+
+### Entity Integrity
+- Every table has a primary key.
+- UUIDs ensure global uniqueness.
+
+### Referential Integrity
+- Foreign keys enforce valid relationships.
+- Enrollment records cannot exist without valid users and platforms.
+
+### Domain Integrity
+- Strong typing using String, Float, and DateTime.
+- Nullable fields explicitly handled.
+
+### Normalization
+- Database design follows Third Normal Form (3NF).
+- Many-to-many relationship resolved using a junction table.
+
+### Indexing
+- Automatic indexes on primary and unique keys.
+- Improves query performance.
+
+
+## 🔄 CRUD & Database Operations (DML)
+
+- **Create**: User registration, platform enrollment
+- **Read**: Dashboard data, platform listings
+- **Update**: Ratings and profile updates
+- **Delete**: Enrollment removal
+
+Prisma abstracts SQL JOINs using the `include` API and supports aggregation using `_count`.
+
+## 🔐 Security Considerations
+
+- SQL Injection prevention via Prisma parameterized queries
+- Password hashing using Bcrypt
+- JWT-based stateless authentication
+- UUIDs prevent predictable identifiers
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16+)
+- Git
+
+### Installation & Run
+
+```bash
+# Backend
+cd server
+npm install
+npx prisma migrate dev
+npm start
