@@ -65,34 +65,36 @@ flowchart LR
     B -->|JSON Data| A
 
 ```
+## 📊 Conceptual Data Model (ER Diagram)
+
 ```mermaid
 erDiagram
     USER ||--o{ ENROLLMENT : enrolls
     PLATFORM ||--o{ ENROLLMENT : contains
 
     USER {
-        string id PK
-        string username UNIQUE
-        string password
-        datetime createdAt
+        id string
+        username string
+        password string
+        createdAt datetime
     }
 
     PLATFORM {
-        string id PK
-        string name
-        string type
-        string categories
-        string languages
-        float rating
-        string topCourse
-        datetime createdAt
+        id string
+        name string
+        type string
+        categories string
+        languages string
+        rating float
+        topCourse string
+        createdAt datetime
     }
 
     ENROLLMENT {
-        string id PK
-        string userId FK
-        string platformId FK
-        datetime enrolledAt
+        id string
+        userId string
+        platformId string
+        enrolledAt datetime
     }
 ```
 
