@@ -38,16 +38,14 @@ The project strongly emphasizes **Database Management System (DBMS) concepts**, 
 
 ---
 
-## 🧰 Technology Stack
+## ⚙️ Tech Stack
 
 | Layer | Technologies |
 |------|-------------|
-| 🖥️ **Frontend** | React • Vite • Tailwind CSS • Lucide React • React Router DOM |
-| ⚙️ **Backend** | Node.js • Express • Prisma ORM |
-| 🔐 **Authentication** | JWT • Bcrypt |
-| 🗄️ **Database** | SQLite |
-| 🧠 **ORM** | Prisma (Schema-First, Type-Safe) |
-
----
+| 🖥️ **Frontend** | [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev) <br/> [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev) <br/> [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com) <br/> [![Lucide](https://img.shields.io/badge/Lucide%20React-000000?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev) <br/> [![React Router](https://img.shields.io/badge/React%20Router-D0021B?style=for-the-badge&logo=reactrouter&logoColor=white)](https://reactrouter.com) |
+| ⚙️ **Backend** | [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org) <br/> [![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com) <br/> [![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io) |
+| 🔐 **Authentication** | [![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io) <br/> [![Bcrypt](https://img.shields.io/badge/Bcrypt-003A8F?style=for-the-badge)](https://www.npmjs.com/package/bcrypt) |
+| 🗄️ **Database** | [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html) |
+| 🧠 **ORM** | [![Prisma ORM](https://img.shields.io/badge/Prisma%20ORM-Schema--First%20%7C%20Type--Safe-4B32C3?style=for-the-badge)](https://www.prisma.io/docs) |
 
 
