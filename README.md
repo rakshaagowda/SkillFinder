@@ -1,16 +1,53 @@
-# React + Vite
+# 🎓 SkillFinder — Learning Platform Discovery & Enrollment System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://img.shields.io/badge/Type-Full--Stack%20Web%20Application-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Database-SQLite%20%7C%20Prisma-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Auth-JWT%20%7C%20Bcrypt-darkred?style=for-the-badge"/>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <b>A unified platform to discover, explore, and enroll in online & offline learning providers</b><br/>
+  <i>DBMS Concepts • Modern Web Stack • Secure Authentication</i>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**SkillFinder** is a full-stack web application that connects users with **online and offline learning platforms**.  
+It enables users to:
 
-## Expanding the ESLint configuration
+- Browse learning providers
+- View platform details (ratings, categories, location, languages)
+- Securely enroll in courses
+- Manage enrollments through a normalized relational database
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The project strongly emphasizes **Database Management System (DBMS) concepts**, implemented using **SQLite** and **Prisma ORM**.
+
+---
+
+## ✨ Key Features
+
+- 🔍 Browse online & offline learning platforms
+- ⭐ View ratings, categories, languages, and locations
+- 🧾 Secure enrollment system
+- 🔐 JWT-based authentication
+- 🧠 Well-normalized relational database (3NF)
+- 🗂️ Prisma ORM with schema-first design
+
+---
+
+## 🧰 Technology Stack
+
+| Layer | Technologies |
+|------|-------------|
+| 🖥️ **Frontend** | React • Vite • Tailwind CSS • Lucide React • React Router DOM |
+| ⚙️ **Backend** | Node.js • Express • Prisma ORM |
+| 🔐 **Authentication** | JWT • Bcrypt |
+| 🗄️ **Database** | SQLite |
+| 🧠 **ORM** | Prisma (Schema-First, Type-Safe) |
+
+---
+
+
